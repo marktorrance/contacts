@@ -1,0 +1,20 @@
+%table(width="80%")
+  %tr
+    %td
+      Person 1
+      %select#pf1(name="person1" onchange="C.load_person(this.value,'#p1')")
+        %option{:value=>'', :selected=>true} None
+        - @people.each do |p|
+          %option{:value=>p.id}= p.name
+
+    %td
+      Person 2
+      %select#pf2(name="person2" onchange="C.load_person(this.value,'#p2')")
+        %option{:value=>'', :selected=>true}
+        - @people.each do |p|
+          %option{:value=>p.id}= p.name
+  %tr
+    %td#p1  P1
+    %td#p2  P2
+
+#result

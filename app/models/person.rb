@@ -1,2 +1,26 @@
 class Person < ActiveRecord::Base
+  def to_s
+    "#{name} from #{city}"
+  end
+
+  def address_string_encoded
+    CGI::escape("#{address1}, #{city} #{state} #{zip}")
+  end
+
 end
+# == Schema Information
+#
+# Table name: people
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  address1   :string(255)
+#  city       :string(255)
+#  state      :string(255)
+#  zip        :string(255)
+#  phone1     :string(255)
+#  email      :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

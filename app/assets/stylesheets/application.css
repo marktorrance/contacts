@@ -3,5 +3,43 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
+
+body,td {
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 60px;
+  background-color: #660066;
+  color: white;
+  font-size: 24px;
+  padding: 6px 20px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.property_list {
+  border-spacing: 0px;
+}
+
+.property_list td {
+  padding: 3px 10px;
+}
+
+.property_list tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.property_list td:first-child {
+  font-weight: bold;
+}
+
+#result {
+  margin-top:20px;
+}

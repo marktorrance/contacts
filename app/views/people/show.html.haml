@@ -1,0 +1,13 @@
+%table.property_list
+  %tr
+    %td Name
+    %td= @person.name
+  %tr
+    %td Address
+    %td #{@person.address1}<br>#{@person.city}, #{@person.state} #{@person.zip}
+  %tr
+    %td Phone
+    %td= @person.phone1
+  %tr
+    %td Email
+    %td= @person.email
